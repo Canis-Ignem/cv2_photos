@@ -4,6 +4,8 @@ import os
 cv2.waitKey(3000)
 
 def camera(mirror=False):
+    if not os.path.exists("images/"):
+        os.mkdir("images/", 0o755);
     
     cam = cv2.VideoCapture(0)
     
